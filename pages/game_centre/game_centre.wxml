@@ -1,0 +1,39 @@
+<!--pages/game_centre/game_centre.wxml-->
+<view class='container'>
+
+
+  <view class='main_bg'>
+
+
+  </view>
+
+  <view class='content'>
+
+
+    <image src='/imgs/entry_fighting.jpg' class='ic_avatar'></image>
+
+    <text class='user_name'>姓名</text>
+
+    <image src='/imgs/entry_fighting.jpg' class='ic_pattern'></image>
+    <view class='customs_pass'>
+      <text>第</text>
+      <text>1</text>
+      <text>关</text>
+    </view>
+
+    <image src='/imgs/entry_fighting.jpg' class='play_game' bindtap='playGame'></image>
+
+
+    <button class='invite_friend'>邀请小伙伴帮忙答题</button>
+
+    <view class='footer'>
+    <text>有</text>
+    <text>3</text>
+    <text>次消耗金币提示机会，请珍惜</text>
+    </view>
+
+  </view>
+
+
+
+</view>
