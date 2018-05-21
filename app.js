@@ -17,7 +17,7 @@ App({
   onLaunch(opt) {
     this.appData.opt = opt
     qcloud.setLoginUrl(config.service.loginUrl);  //设置登录地址
-    this.doLogin();
+    // this.doLogin();
   },
   onShow(opt) {
     this.storeUser_network(opt)//每次打开程序都启动存储用户关系表

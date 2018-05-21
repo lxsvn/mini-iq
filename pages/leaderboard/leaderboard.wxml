@@ -1,0 +1,94 @@
+<!--pages/leaderboard/leaderboard.wxml-->
+
+<!-- 顶部前三名  -->
+<view class='headerView'>
+  <!-- 冠军  -->
+  <view class='champion'>
+
+    <view class='championIconContainer'>
+      <image class='championIcon' src='/imgs/VS.svg'></image>
+    </view>
+    
+    <image class='championCrown' src='/imgs/quit.svg'></image>
+
+    <view class='championLevelContainer'>
+      <view class='championLevelNum'>123关</view>
+      <view class='championTopNum'>1</view>
+    </view>
+
+    <text class='championName'>IQ 第一名</text>
+  </view>
+
+  <!-- 亚军  -->
+  <view class='runnerUp'>
+
+    <view class='runnerUpIconContainer'>
+      <image class='runnerUpIcon' src='/imgs/VS.svg'></image>
+    </view>
+    
+    <image class='runnerUpCrown' src='/imgs/quit.svg'></image>
+
+    <view class='runnerUpLevelContainer'>
+      <view class='runnerUpLevelNum'>100关</view>
+      <view class='runnerUpTopNum'>2</view>
+    </view>
+
+    <text class='runnerUpName'>IQ 第二名</text>
+  </view>
+
+  <!-- 季军  -->
+  <view class='thirdPlace'>
+
+    <view class='thirdPlaceIconContainer'>
+      <image class='thirdPlaceIcon' src='/imgs/VS.svg'></image>
+    </view>
+    
+    <image class='thirdPlaceCrown' src='/imgs/quit.svg'></image>
+
+    <view class='thirdPlaceLevelContainer'>
+      <view class='thirdPlaceLevelNum'>89关</view>
+      <view class='thirdPlaceTopNum'>3</view>
+    </view>
+
+    <text class='thirdPlaceName'>IQ 第三名</text>
+  </view>
+</view>
+
+<view class='listView'>
+  <scroll-view scroll-y class='listScrollView'>
+    <view class='listViewItem' wx:for="{{listViewItems}}" >
+      
+      <view class='listViewItemRanking'>{{item}}</view>
+
+       <view class='listViewItemIconContainer'> 
+        <image class='listViewItemIcon' src='/imgs/quit.svg'></image>
+       </view> 
+
+      <view class='listViewItemName'>{{item}}name</view>
+
+      <view class='listViewItemLevelContainer'>
+        <view class='listViewItemLevel'>{{item}}level</view>
+      </view>
+      
+    </view>
+  </scroll-view>
+  
+</view>
+
+<view class='selfScoreView'>      
+    <view class='listViewItemRanking'>1</view>
+
+      <view class='listViewItemIconContainer'> 
+      <image class='listViewItemIcon' src='/imgs/quit.svg'></image>
+      </view> 
+
+    <view class='listViewItemName'>self</view>
+
+    <view class='listViewItemLevelContainer'>
+      <view class='listViewItemLevel'>123level</view>
+    </view>
+</view>
+
+<view class='footerView'>
+  <view class='footerViewBtn'>查看群排行</view>
+</view>

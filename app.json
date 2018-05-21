@@ -6,13 +6,14 @@
     "pages/friends_sort/friends_sort",
     "pages/friends_match/friends_match",
     "pages/rank/rank",
-    "pages/fighting_room/fighting_room"
+    "pages/fighting_room/fighting_room",
+    "pages/leaderboard/leaderboard"
   ],
   "window": {
     "backgroundColor": "#052152",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#3883FA",
-    "navigationBarTitleText": "超级大脑5",
+    "navigationBarTitleText": "IQ",
     "navigationBarTextStyle": "white"
   }
 }

@@ -1,0 +1,437 @@
+/* pages/leaderboard/leaderboard.wxss */
+
+/* 整体底部  */
+.leaderboardPage
+{
+  display: flex; 
+  flex-direction: column;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  height: 100vh;
+  background-color: white;
+}
+
+/* 顶部前三名 */
+.headerView
+{
+  position: relative;
+  margin-top: 10rpx;
+  margin-left: 3%;
+  margin-right: 3%;
+  height: 300rpx;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* 冠军  */
+.champion
+{
+  position: absolute;
+  margin-bottom: 0rpx;
+  margin-left: 32%;
+  margin-right: 30%;
+  height: 100%;
+  width: 36%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.championIconContainer
+{
+  position: absolute;
+  bottom: 100rpx;
+  margin-left: 0rpx;
+  margin-right: 0rpx;
+  height: 150rpx;
+  width: 100%;
+  text-align: center;
+}
+
+.championIcon
+{
+  text-align:center;
+  border-radius: 80rpx;
+  border:1px solid #000;
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.championCrown
+{
+  position: absolute;
+  top: 25rpx;
+  right: 25rpx; 
+  height: 100rpx;
+  width: 100rpx;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.championLevelContainer
+{
+  position: absolute;
+  bottom: 70rpx;
+  margin-left: 0rpx;
+  margin-right: 0rpx;
+  height: 60rpx;
+  width: 100%;
+}
+
+.championTopNum
+{
+  position: absolute;
+  bottom: 0rpx;
+  margin-left: 5%;
+  height: 60rpx;
+  width: 60rpx;
+  border-radius: 35px;
+  background-color: red;
+  text-align: center;
+  color: white;
+  line-height: 60rpx;
+}
+
+.championLevelNum
+{
+  position: absolute;
+  bottom: 5rpx;
+  margin-left: 6%;
+  height: 50rpx;
+  width: 88%;
+  border-radius: 35px;
+  background-color: purple;
+  text-align: center;
+  font-size: 0.6rem;
+  line-height:50rpx;
+  color: white;
+}
+
+.championName
+{
+  position: absolute;
+  bottom: 0rpx;
+  margin-left: 0rpx;
+  margin-right: 0rpx;
+  height: 60rpx;
+  width: 100%;
+  text-align: center;
+  font-size: 1.0rem;
+}
+
+/* 亚军  */
+.runnerUp
+{
+  position: absolute;
+  margin-bottom: 0rpx;
+  margin-left: 0;
+  margin-right: 30%;
+  height: 100%;
+  width: 30%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.runnerUpIconContainer
+{
+  position: absolute;
+  bottom: 100rpx;
+  margin-left: 0rpx;
+  margin-right: 0rpx;
+  height: 120rpx;
+  width: 100%;
+  text-align: center;
+}
+
+.runnerUpIcon
+{
+  text-align:center;
+  border-radius: 70rpx;
+  border:1px solid #000;
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.runnerUpCrown
+{
+  position: absolute;
+  top: 50rpx;
+  right: 30rpx; 
+  height: 80rpx;
+  width: 80rpx;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.runnerUpLevelContainer
+{
+  position: absolute;
+  bottom: 70rpx;
+  margin-left: 0rpx;
+  margin-right: 0rpx;
+  height: 60rpx;
+  width: 100%;
+}
+
+.runnerUpTopNum
+{
+  position: absolute;
+  bottom: 0rpx;
+  margin-left: 5%;
+  height: 60rpx;
+  width: 60rpx;
+  border-radius: 35px;
+  background-color: yellow;
+  text-align: center;
+  color: white;
+  line-height: 60rpx;
+}
+
+.runnerUpLevelNum
+{
+  position: absolute;
+  bottom: 5rpx;
+  margin-left: 6%;
+  height: 50rpx;
+  width: 88%;
+  border-radius: 35px;
+  background-color: purple;
+  text-align: center;
+  font-size: 0.6rem;
+  color: white;
+  line-height:50rpx;
+}
+
+.runnerUpName
+{
+  position: absolute;
+  bottom: 0rpx;
+  margin-left: 0rpx;
+  margin-right: 0rpx;
+  height: 60rpx;
+  width: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+/* 季军  */
+.thirdPlace
+{
+  position: absolute;
+  margin-bottom: 0rpx;
+  margin-left: 70%;
+  margin-right: 30%;
+  height: 100%;
+  width: 30%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.thirdPlaceIconContainer
+{
+  position: absolute;
+  bottom: 100rpx;
+  margin-left: 0rpx;
+  margin-right: 0rpx;
+  height: 120rpx;
+  width: 100%;
+  text-align: center;
+}
+
+.thirdPlaceIcon
+{
+  text-align:center;
+  border-radius: 60rpx;
+  border:1px solid #000;
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.thirdPlaceCrown
+{
+  position: absolute;
+  top: 50rpx;
+  right: 30rpx; 
+  height: 80rpx;
+  width: 80rpx;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.thirdPlaceLevelContainer
+{
+  position: absolute;
+  bottom: 70rpx;
+  margin-left: 0rpx;
+  margin-right: 0rpx;
+  height: 60rpx;
+  width: 100%;
+}
+
+.thirdPlaceTopNum
+{
+  position: absolute;
+  bottom: 0rpx;
+  margin-left: 5%;
+  height: 60rpx;
+  width: 60rpx;
+  border-radius: 35px;
+  background-color: green;
+  text-align: center;
+  color: white;
+  line-height: 60rpx;
+}
+
+.thirdPlaceLevelNum
+{
+  position: absolute;
+  bottom: 5rpx;
+  margin-left: 6%;
+  height: 50rpx;
+  width: 88%;
+  border-radius: 35px;
+  background-color: purple;
+  text-align: center;
+  font-size: 0.6rem;
+  color: white;
+  line-height:50rpx;
+}
+
+.thirdPlaceName
+{
+  position: absolute;
+  bottom: 0rpx;
+  margin-left: 0rpx;
+  margin-right: 0rpx;
+  height: 60rpx;
+  width: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.listView
+{
+  position: relative;
+  margin-top: 5rpx;
+  margin-left: 3%;
+  margin-right: 3%;
+  height: 700rpx;
+  background-color: lightgray;
+}
+
+.listScrollView
+{
+  position: absolute;
+  margin-top: 0rpx;
+  margin-left: 0rpx;
+  margin-right: 0rpx;
+  height: 100%;
+  background-color: lightgray;
+}
+
+.listViewItem
+{
+  position: relative;
+  margin-top: 5rpx;
+  margin-left: 0rpx;
+  margin-right: 0rpx;
+  height: 150rpx;
+  background-color: lightcoral;
+}
+
+.listViewItemRanking
+{
+  position: absolute;
+  left: 10rpx;
+  height: 150rpx;
+  top: 0rpx;
+  width: 60rpx;
+  font-size: 0.8rem;
+  color: white;
+  line-height: 150rpx;
+  text-align: center;
+}
+
+.listViewItemIconContainer
+{
+  position: absolute;
+  top: 25rpx;
+  left: 70rpx;
+  text-align: center;
+}
+
+.listViewItemIcon
+{
+  text-align:center;
+  border-radius: 55rpx;
+  border:1px solid #000;
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.listViewItemName
+{
+  position: absolute;
+  top: 25rpx;
+  left: 170rpx;
+  bottom: 25rpx;
+  height: 100rpx;
+  width: 400rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.listViewItemLevelContainer
+{
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx;
+  right: 0rpx;
+  bottom: 0rpx;
+  text-align: right;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.listViewItemLevel
+{
+  position: absolute;
+  text-align: center;
+  top: 45rpx;
+  right: 20rpx;
+  width: 120rpx;
+  height: 60rpx;
+  background-color: rgba(0, 0, 0, 0);
+  line-height: 60rpx;
+  color: white;
+  font-size: 0.8rem;
+  border-radius: 45rpx;
+  border: 1px solid #000;
+}
+
+.selfScoreView
+{
+  position: relative;
+  margin-top: 5rpx;
+  margin-left: 3%;
+  margin-right: 3%;
+  height: 150rpx;
+  background-color: lightgray;
+}
+
+.footerView
+{
+  position: relative;
+  margin-top: 5rpx;
+  margin-left: 3%;
+  margin-right: 3%;
+  height: 150rpx;
+  background-color: lightgray;
+}
+
+.footerViewBtn
+{
+  width: 400rpx;  
+  height: 80rpx;  
+  overflow: auto;  
+  margin: auto;  
+  position: absolute;  
+  border-radius: 40rpx;
+  color: white;
+  background-color: lightsalmon;
+  font-size: 1.2rem;
+  text-align: center;
+  top: 0; left: 0; bottom: 0; right: 0; 
+  line-height: 80rpx;
+}
