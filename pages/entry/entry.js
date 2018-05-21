@@ -4,13 +4,65 @@ const app = getApp();
 Page({
 	data:
   {
-		
+    hasUserInfo: false
 	},
 
 	onLoad(opt) 
   {
-		
+    this.setData({
+      hasLogin: app.globalData.hasLogin
+    })
 	},
+
+  onReady()
+  {
+    this.getUserMessage();
+  },
+  
+  login: function () 
+  {
+    var that = this
+    wx.login({
+      success: function (res) 
+      {
+        app.globalData.hasLogin = true
+        that.setData({
+          hasLogin: true
+        })
+        that.update()
+      }
+    })
+  },
+
+  getUserInfo: function () 
+  {
+    this.getUserMessage();
+  },
+
+  getUserMessage() {
+    var that = this
+
+    if (app.globalData.hasLogin === false) {
+      wx.login({
+        success: _getUserInfo
+      })
+    }
+    else {
+      _getUserInfo()
+    }
+
+    function _getUserInfo() {
+      wx.getUserInfo({
+        success: function (res) {
+          that.setData({
+            hasUserInfo: true,
+            userInfo: res.userInfo
+          })
+          that.update()
+        }
+      })
+    }
+  },
 
 	onShow() 
   {
@@ -50,3 +102,4 @@ Page({
 		}
 	}
 })
+
