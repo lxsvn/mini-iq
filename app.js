@@ -7,6 +7,9 @@ var config = require('./config');
 var util = require('./utils/util.js')
 
 App({
+  globalData: {
+    hasLogin: false
+  },
   // 小程序初始化时执行，我们初始化客户端的登录地址，以支持所有的会话操作
   appData: {
     appId: config.service.appId,

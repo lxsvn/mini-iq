@@ -1,12 +1,20 @@
 <view class='homePage'>
-  
+
   <view class='personContainer'>
 
-    <view class='person' bindtap='gotoPersonCenter'>
-      <image class='personIcon' src='/imgs/PK_equal.svg'></image>
-      <text class='personName'>我</text>
+    <view class='person' bindtap='getUserInfo'>
+
+      <block wx:if="{{hasUserInfo === false}}">
+         <image class='personIcon' src='/imgs/PK_equal.svg' bindtap='login'></image>
+        <text class='personName' open-type='getUserInfo'>昵称</text> 
+      </block>
+      
+      <block wx:if="{{hasUserInfo == true}}">
+        <image class='personIcon' src="{{userInfo.avatarUrl}}"></image>
+        <text class='personName'>{{userInfo.nickName}}</text>
+      </block>
     </view>
-    
+
     <view class='score' bindtap='gotoPersonCenter'>
       <image class='scoreIcon' src='/imgs/PK_equal.svg'></image>
       <text class='scoreName'>得分</text>
@@ -18,9 +26,9 @@
     <view>IQ 大比拼</view>
   </view>
 
-  <view class='choose' bindtap='gotoFighting'>
+  <!-- <view class='choose' bindtap='gotoFighting'>
     <view>闯关赛</view>
-  </view>
+  </view> -->
   
   <view class='bottomContainer'>
     

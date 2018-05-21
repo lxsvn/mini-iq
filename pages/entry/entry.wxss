@@ -44,11 +44,15 @@
 {
   position: absolute;
   left: 40%;
-  top: 40%;
-  width: 60%;
+  top: 50rpx;
+  width: 50%;
   font-weight: bold;
   font-size: 36rpx;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 0;
+  border-color: rgba(0, 0, 0, 0);
+  color: white;
 }
 
 .score
