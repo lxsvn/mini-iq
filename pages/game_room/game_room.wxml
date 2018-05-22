@@ -1,0 +1,39 @@
+<!--pages/game_room/game_room.wxml-->
+<view class='container'>
+
+  <view class='main_bg'>
+
+
+  </view>
+
+
+  <view class='content'>
+
+
+    <image src='/imgs/entry_fighting.jpg' class='ic_pattern'></image>
+
+
+    <view class='customs_pass'>
+      <text>第</text>
+      <text>1</text>
+      <text>关</text>
+    </view>
+
+    <progress percent='{{percent}}' class='progress_bar' > </progress>
+
+    <button class='first_btn' bindtap='first_answer'>古往今来</button>
+    <button class='second_btn' bindtap='second_answer'>股往进来</button>
+
+    <view class='footer'>
+
+      <image src='/imgs/VS.svg'></image>
+
+      <text>260</text>
+
+      <text class='remind_tv'>提示x3</text>
+    </view>
+
+
+  </view>
+
+</view>

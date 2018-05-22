@@ -3,8 +3,12 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
   align-items: center;
   justify-content: space-between;
   padding: 200rpx 0;
+=======
+  align-items: center; 
+>>>>>>> 87d96642a04f98a1f5ad60f3c3220018dc88e647
   box-sizing: border-box;
 } 
