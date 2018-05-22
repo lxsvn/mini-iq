@@ -19,6 +19,11 @@ var config = {
     }
 }
 
-
+var baseMsg = {
+  "Channel": "mini",
+  "Code": "20001000",
+  "Type": 1,
+  "Data": {}
+}
 
 module.exports = config
