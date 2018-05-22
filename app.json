@@ -9,7 +9,7 @@
     "pages/rank/rank",
     "pages/fighting_room/fighting_room",
     "pages/leaderboard/leaderboard",
-	  "pages/game_centre/game_centre",
+    "pages/game_centre/game_centre",
     "pages/game_room/game_room"
   ],
   "window": {
