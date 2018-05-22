@@ -14,24 +14,7 @@ Page({
   },
   onLoad: function () {
     //this.openWS(); 
-  },
-  openWS: function () {
-    if (!ws.socketOpened) {
-      // setMsgReceiveCallback 
-      ws.setReceiveCallback(msgReceived, this, this.wsCallback);
-      // connect to the websocket 
-      ws.connect();
-    }
-    else {
-     
-    }
-  },
-  wsCallback: function (msg) {
-    this.setData({
-      msg: JSON.stringify(msg)
-    });
-    // console.log("wsCallback:"+msg.Code);
-  },
+  }, 
   // ################## 事件处理函数 ################## 
   //1. 去首页
   goHomePage: function () {

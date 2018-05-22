@@ -35,6 +35,7 @@ App({
     })
   },
   globalData: {
+    socketOpened: false,
     userInfo: {}
   }
 })
