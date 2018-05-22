@@ -74,6 +74,7 @@ Page({
   {
 		wx.navigateTo({
 			url: '../fighting_sort/fighting_sort'
+      url: '../game_centre/game_centre'
 		})
 	},
 
