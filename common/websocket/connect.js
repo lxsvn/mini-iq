@@ -2,7 +2,6 @@
 var config = require('../../config.js');
 
 module.exports = (function () {
-  console.log(config);
   var webSocketUrl = `${config.service.hostWS}/ios_v_1.0/66507954637773`,
     socketOpened = false, // 标记websocket是否已经打开
     socketMsgQueue = [],

@@ -4,7 +4,8 @@
     "pages/entry/entry",
     "pages/rank/rank",  
     "pages/game/game_index",
-    "pages/game/game_room"
+    "pages/game/game_room",
+    "pages/test/socket"
   ],
   "window": {
     "backgroundColor": "#052152",

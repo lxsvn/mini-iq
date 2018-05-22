@@ -33,14 +33,25 @@ Page({
     // console.log("wsCallback:"+msg.Code);
   },
   // ################## 事件处理函数 ################## 
-  //1. 开始游戏
-  startPlay: function () {
-    console.log("2");
+  //1. 开启socket 
+  openSocket: function () {
+    this.openWS();
   },
-  //2. 去测试socket
-  goTestSocketPage: function () {
-    wx.navigateTo({
-      url: '../test/socket'
-    })
-  },
+  //2. 获取题目
+  getNextQuestion: function () {
+    if (!ws.socketOpened) {
+      this.setData({
+        msg: "请先开启socket!"
+      });
+      return false;
+    }
+    ws.send({
+      "Channel": "mini",
+      "Code": "20001000",
+      "Type": 1,
+      "Data": {
+        "NativeId": "7c929bb0-9529-4cf9-9e26-0cddacbd0abb"
+      }
+    });
+  }
 })
