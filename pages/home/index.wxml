@@ -1,14 +1,7 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-    <button  wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 连接socket </button>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-</view>
+<button type="default" bindtap="default" > default </button> 
+<!-- <button type="primary" bindtap="startPlay">开始游戏</button>  -->
+<button type="warn" bindtap="testSocket" >socket开启</button>
+<button type="warn" bindtap="getNextQuestion" >获取题目</button>
+<text>{{msg}}</text>
+
+ 
