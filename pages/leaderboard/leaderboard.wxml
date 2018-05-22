@@ -6,10 +6,10 @@
   <view class='champion'>
 
     <view class='championIconContainer'>
-      <image class='championIcon' src='/imgs/VS.svg'></image>
+      <image class='championIcon' src='/imgs/face.svg'></image>
     </view>
     
-    <image class='championCrown' src='/imgs/quit.svg'></image>
+    <image class='championCrown' src='/imgs/crown-1.svg'></image>
 
     <view class='championLevelContainer'>
       <view class='championLevelNum'>123关</view>
@@ -23,10 +23,10 @@
   <view class='runnerUp'>
 
     <view class='runnerUpIconContainer'>
-      <image class='runnerUpIcon' src='/imgs/VS.svg'></image>
+      <image class='runnerUpIcon' src='/imgs/face.svg'></image>
     </view>
     
-    <image class='runnerUpCrown' src='/imgs/quit.svg'></image>
+    <image class='runnerUpCrown' src='/imgs/crown-2.svg'></image>
 
     <view class='runnerUpLevelContainer'>
       <view class='runnerUpLevelNum'>100关</view>
@@ -40,10 +40,10 @@
   <view class='thirdPlace'>
 
     <view class='thirdPlaceIconContainer'>
-      <image class='thirdPlaceIcon' src='/imgs/VS.svg'></image>
+      <image class='thirdPlaceIcon' src='/imgs/face.svg'></image>
     </view>
     
-    <image class='thirdPlaceCrown' src='/imgs/quit.svg'></image>
+    <image class='thirdPlaceCrown' src='/imgs/crown-3.svg'></image>
 
     <view class='thirdPlaceLevelContainer'>
       <view class='thirdPlaceLevelNum'>89关</view>
@@ -56,12 +56,12 @@
 
 <view class='listView'>
   <scroll-view scroll-y class='listScrollView'>
-    <view class='listViewItem' wx:for="{{listViewItems}}" >
+    <view class='listViewItem' wx:for="{{listViewItems}}" wx:key="{{index}}" >
       
       <view class='listViewItemRanking'>{{item}}</view>
 
        <view class='listViewItemIconContainer'> 
-        <image class='listViewItemIcon' src='/imgs/quit.svg'></image>
+        <image class='listViewItemIcon' src='/imgs/face.svg'></image>
        </view> 
 
       <view class='listViewItemName'>{{item}}name</view>
@@ -79,7 +79,7 @@
     <view class='listViewItemRanking'>1</view>
 
       <view class='listViewItemIconContainer'> 
-      <image class='listViewItemIcon' src='/imgs/quit.svg'></image>
+      <image class='listViewItemIcon' src='/imgs/face.svg'></image>
       </view> 
 
     <view class='listViewItemName'>self</view>
@@ -90,5 +90,5 @@
 </view>
 
 <view class='footerView'>
-  <view class='footerViewBtn'>查看群排行</view>
+  <button open-type="share" class='footerViewBtn'>查看群排行</button>
 </view>

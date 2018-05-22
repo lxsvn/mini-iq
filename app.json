@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/home/index",
     "pages/entry/entry",
+    "pages/home/index",
+    
     "pages/fighting_sort/fighting_sort",
     "pages/fighting_match/fighting_match",
     "pages/friends_sort/friends_sort",
@@ -15,7 +16,7 @@
   "window": {
     "backgroundColor": "#052152",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#3883FA",
+    "navigationBarBackgroundColor": "#ffd56e",
     "navigationBarTitleText": "IQ",
     "navigationBarTextStyle": "white"
   }

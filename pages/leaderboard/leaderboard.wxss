@@ -1,15 +1,5 @@
 /* pages/leaderboard/leaderboard.wxss */
-
-/* 整体底部  */
-.leaderboardPage
-{
-  display: flex; 
-  flex-direction: column;
-  box-sizing: border-box;
-  font-size: 30rpx;
-  height: 100vh;
-  background-color: white;
-}
+ @import "../../utils/base_bg.wxss"; 
 
 /* 顶部前三名 */
 .headerView
@@ -19,7 +9,9 @@
   margin-left: 3%;
   margin-right: 3%;
   height: 300rpx;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: lightsalmon;
+  border-radius: 30rpx;
+  border: 1rpx solid #fff;
 }
 
 /* 冠军  */
@@ -307,8 +299,8 @@
   margin-top: 5rpx;
   margin-left: 3%;
   margin-right: 3%;
-  height: 700rpx;
-  background-color: lightgray;
+  height: 600rpx;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .listScrollView
@@ -318,17 +310,19 @@
   margin-left: 0rpx;
   margin-right: 0rpx;
   height: 100%;
-  background-color: lightgray;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .listViewItem
 {
   position: relative;
   margin-top: 5rpx;
-  margin-left: 0rpx;
-  margin-right: 0rpx;
+  margin-left: 5rpx;
+  margin-right: 5rpx;
   height: 150rpx;
-  background-color: lightcoral;
+  background-color: #ffd56e;
+  border-radius: 30rpx;
+  border: 3rpx solid #000;
 }
 
 .listViewItemRanking
@@ -356,7 +350,7 @@
 {
   text-align:center;
   border-radius: 55rpx;
-  border:1px solid #000;
+  border:1px solid #fff;
   width: 100rpx;
   height: 100rpx;
 }
@@ -371,6 +365,7 @@
   width: 400rpx;
   line-height: 100rpx;
   text-align: center;
+  color: white;
 }
 
 .listViewItemLevelContainer
@@ -396,8 +391,6 @@
   line-height: 60rpx;
   color: white;
   font-size: 0.8rem;
-  border-radius: 45rpx;
-  border: 1px solid #000;
 }
 
 .selfScoreView
@@ -407,7 +400,9 @@
   margin-left: 3%;
   margin-right: 3%;
   height: 150rpx;
-  background-color: lightgray;
+  background-color: lightsalmon;
+  border-radius: 30rpx;
+  border: 3rpx solid #000;
 }
 
 .footerView
@@ -417,7 +412,7 @@
   margin-left: 3%;
   margin-right: 3%;
   height: 150rpx;
-  background-color: lightgray;
+  background-color: #ffd56e;
 }
 
 .footerViewBtn

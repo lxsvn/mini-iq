@@ -1,14 +1,67 @@
 //index.js
 const app = getApp();
 
+function timing(that) {
+  var seconds = that.data.seconds
+  if (seconds > 3600) {
+    that.setData({
+      time: '00:00:00',
+      seconds: seconds + 1,
+    });
+    clearTimeout();
+    return;
+  }
+  setTimeout(function () {
+    that.setData({
+      seconds: seconds + 1,
+    });
+    if((seconds+1)%10 == 0)
+    {
+      that.setData({
+        coin: that.data.coin + 1,
+      });
+    }
+    timing(that);
+  }
+    , 1000)
+  formatSeconds(that)
+}
+function formatSeconds(that) {
+  var mins = 0, hours = 0, seconds = that.data.seconds, time = ''
+  if (seconds < 60) {
+
+  } else if (seconds < 3600) {
+    mins = parseInt(seconds / 60)
+    seconds = seconds % 60
+  } else {
+    mins = parseInt(seconds / 60)
+    seconds = seconds % 60
+    hours = parseInt(mins / 60)
+    mins = mins % 60
+  }
+  that.setData({
+    time: formatTime(hours) + ':' + formatTime(mins) + ':' + formatTime(seconds),
+  });
+}
+function formatTime(num) {
+  if (num < 10)
+    return '0' + num
+  else
+    return num + ''
+}
+
 Page({
 	data:
   {
-    hasUserInfo: false
+    hasUserInfo: false,
+    seconds: 0,
+    time: '00:00:00',
+    coin: 0,
 	},
 
 	onLoad(opt) 
   {
+    timing(this);
     this.setData({
       hasLogin: app.globalData.hasLogin
     })
@@ -63,6 +116,11 @@ Page({
       })
     }
   },
+  
+  timeCount: function()
+  {
+
+  },
 
 	onShow() 
   {
@@ -73,7 +131,7 @@ Page({
 	gotoFighting() 
   {
 		wx.navigateTo({
-      url: '../game_centre/game_centre'
+      url: '../game_centre/game_centre'  
 		})
 	},
 
@@ -100,6 +158,17 @@ Page({
     {
 			app.tunnel.close();
 		}
-	}
+	},
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+    return {
+      title: 'IQ@高智商的你',
+      path: '/pages/entry/entry',
+      imageUrl: 'http://i0.hdslb.com/bfs/archive/2722a167806e5e732939ec3d847a9e9ac58e79e0.jpg'
+    }
+  }
 })
 
