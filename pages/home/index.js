@@ -21,17 +21,9 @@ Page({
       ws.setReceiveCallback(msgReceived, this, this.wsCallback);
       // connect to the websocket 
       ws.connect();
-      ws.send({
-        type: 'create',
-        my: 'ds'
-      });
-
     }
     else {
-      ws.send({
-        type: 'create',
-        no: 1
-      });
+     
     }
   },
   wsCallback: function (msg) {
