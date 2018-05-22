@@ -1,4 +1,4 @@
-@import "../../utils/base_bg.wxss";
+@import "../../assets/xss/base_bg.wxss";
 
 .homePage
 {

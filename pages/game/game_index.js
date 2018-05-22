@@ -12,7 +12,7 @@ Page({
 
   playGame:function(){
     wx.navigateTo({
-      url: '../game_room/game_room',
+      url: '../game/game_room',
     })
   },
 

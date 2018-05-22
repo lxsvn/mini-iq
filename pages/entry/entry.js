@@ -131,7 +131,7 @@ Page({
 	gotoFighting() 
   {
 		wx.navigateTo({
-      url: '../game_centre/game_centre'  
+      url: '../game/game_index'  
 		})
 	},
 
@@ -146,7 +146,7 @@ Page({
   gotoLeaderboard: function()
   {
     wx.navigateTo({
-      url: '../leaderboard/leaderboard'
+      url: '../rank/rank'
     })
   },
 

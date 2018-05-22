@@ -1,5 +1,5 @@
 /* pages/game_centre/game_centre.wxss */
-@import "../../utils/base_bg.wxss";
+@import "../../assets/xss/base_bg.wxss";
 
 .container{
   display: block;

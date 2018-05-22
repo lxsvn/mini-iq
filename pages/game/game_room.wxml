@@ -10,7 +10,7 @@
   <view class='content'>
 
 
-    <image src='/imgs/entry_fighting.jpg' class='ic_pattern'></image>
+    <image src='../../assets/imgs/entry_fighting.jpg' class='ic_pattern'></image>
 
 
     <view class='customs_pass'>
@@ -28,7 +28,7 @@
 
     <view class='footer'>
 
-      <image class='footer_img' src='/imgs/VS.svg' ></image>
+      <image class='footer_img' src='../../assets/imgs/VS.svg' ></image>
 
       <text>260</text>
 

@@ -1,47 +1,94 @@
-<view >
+<!--pages/leaderboard/leaderboard.wxml-->
 
-  <view class='tab'>
-    <view class="{{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">好友排名</view>
-    <view class="{{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">全球排名</view>
-  </view>
-  <view >
+<!-- 顶部前三名  -->
+<view class='headerView'>
+  <!-- 冠军  -->
+  <view class='champion'>
 
-    <view wx:if='{{currentTab==0}}' >
-      <view wx:for="{{friendsData}}" class='item'>
-        <view style='width:10%;font-size:38rpx;'>{{index+1}}</view>
-        <view style='width:30%;'>
-          <image src='{{item.avatarUrl}}'></image>
-        </view>
-        <view style='width:70%;'>
-          <view class='itemDetail'>
-            <text>{{item.nickName}}</text>
-            <text style='font-size:28rpx;'>来自:{{item.city}}</text>
-          </view>
-          <view class='itemDetail'>
-            <text>最强王者</text>
-            <text style='font-size:28rpx;'>得分:{{item.score}}</text>
-          </view>
-        </view>
-      </view>
+    <view class='championIconContainer'>
+      <image class='championIcon' src='/imgs/face.svg'></image>
     </view>
-    <view wx:if='{{currentTab==1}}'>
-      <view wx:for="{{globalData}}" class='item'>
-        <view style='width:10%;font-size:38rpx;'>{{index+1}}</view>
-        <view style='width:30%;'>
-          <image src='{{item.avatarUrl}}'></image>
-        </view>
-        <view style='width:70%;'>
-          <view class='itemDetail'>
-            <text>{{item.nickName}}</text>
-            <text style='font-size:28rpx;'>来自:{{item.city?item.city:'德玛西亚'}}</text>
-          </view>
-          <view class='itemDetail'>
-            <text>最强王者</text>
-            <text style='font-size:28rpx;'>得分:{{item.score}}</text>
-          </view>
-        </view>
-      </view>
+    
+    <image class='championCrown' src='/imgs/crown-1.svg'></image>
+
+    <view class='championLevelContainer'>
+      <view class='championLevelNum'>123关</view>
+      <view class='championTopNum'>1</view>
     </view>
+
+    <text class='championName'>IQ 第一名</text>
   </view>
 
+  <!-- 亚军  -->
+  <view class='runnerUp'>
+
+    <view class='runnerUpIconContainer'>
+      <image class='runnerUpIcon' src='/imgs/face.svg'></image>
+    </view>
+    
+    <image class='runnerUpCrown' src='/imgs/crown-2.svg'></image>
+
+    <view class='runnerUpLevelContainer'>
+      <view class='runnerUpLevelNum'>100关</view>
+      <view class='runnerUpTopNum'>2</view>
+    </view>
+
+    <text class='runnerUpName'>IQ 第二名</text>
+  </view>
+
+  <!-- 季军  -->
+  <view class='thirdPlace'>
+
+    <view class='thirdPlaceIconContainer'>
+      <image class='thirdPlaceIcon' src='/imgs/face.svg'></image>
+    </view>
+    
+    <image class='thirdPlaceCrown' src='/imgs/crown-3.svg'></image>
+
+    <view class='thirdPlaceLevelContainer'>
+      <view class='thirdPlaceLevelNum'>89关</view>
+      <view class='thirdPlaceTopNum'>3</view>
+    </view>
+
+    <text class='thirdPlaceName'>IQ 第三名</text>
+  </view>
+</view>
+
+<view class='listView'>
+  <scroll-view scroll-y class='listScrollView'>
+    <view class='listViewItem' wx:for="{{listViewItems}}" wx:key="{{index}}" >
+      
+      <view class='listViewItemRanking'>{{item}}</view>
+
+       <view class='listViewItemIconContainer'> 
+        <image class='listViewItemIcon' src='/imgs/face.svg'></image>
+       </view> 
+
+      <view class='listViewItemName'>{{item}}name</view>
+
+      <view class='listViewItemLevelContainer'>
+        <view class='listViewItemLevel'>{{item}}level</view>
+      </view>
+      
+    </view>
+  </scroll-view>
+  
+</view>
+
+<view class='selfScoreView'>      
+    <view class='listViewItemRanking'>1</view>
+
+      <view class='listViewItemIconContainer'> 
+      <image class='listViewItemIcon' src='/imgs/face.svg'></image>
+      </view> 
+
+    <view class='listViewItemName'>self</view>
+
+    <view class='listViewItemLevelContainer'>
+      <view class='listViewItemLevel'>123level</view>
+    </view>
+</view>
+
+<view class='footerView'>
+  <button open-type="share" class='footerViewBtn'>查看群排行</button>
 </view>

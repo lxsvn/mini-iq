@@ -1,5 +1,5 @@
 /* pages/game_room/game_room.wxss */
-@import "../../utils/base_bg.wxss";
+@import "../../assets/xss/base_bg.wxss";
 .container{
   display: block;
   width: 100%;

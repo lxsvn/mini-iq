@@ -52,4 +52,10 @@ Page({
       }
     });
   },
+  //3. 去首页
+  goHomePage: function () {
+    wx.navigateTo({
+      url: '../entry/entry'
+    })
+  },
 })

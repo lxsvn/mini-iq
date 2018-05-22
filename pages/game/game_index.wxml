@@ -10,18 +10,18 @@
   <view class='content'>
 
 
-    <image src='/imgs/entry_fighting.jpg' class='ic_avatar'></image>
+    <image src='../../assets/imgs/entry_fighting.jpg' class='ic_avatar'></image>
 
     <text class='user_name'>姓名</text>
 
-    <image src='/imgs/entry_fighting.jpg' class='ic_pattern'></image>
+    <image src='../../assets/imgs/entry_fighting.jpg' class='ic_pattern'></image>
     <view class='customs_pass'>
       <text>第</text>
       <text>1</text>
       <text>关</text>
     </view>
 
-    <image src='/imgs/entry_fighting.jpg' class='play_game' bindtap='playGame'></image>
+    <image src='../../assets/imgs/entry_fighting.jpg' class='play_game' bindtap='playGame'></image>
 
 
     <button class='invite_friend'>邀请小伙伴帮忙答题</button>

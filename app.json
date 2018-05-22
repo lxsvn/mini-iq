@@ -1,17 +1,10 @@
 {
   "pages": [
+    "pages/home/index", 
     "pages/entry/entry",
-    "pages/home/index",
-    
-    "pages/fighting_sort/fighting_sort",
-    "pages/fighting_match/fighting_match",
-    "pages/friends_sort/friends_sort",
-    "pages/friends_match/friends_match",
-    "pages/rank/rank",
-    "pages/fighting_room/fighting_room",
-    "pages/leaderboard/leaderboard",
-    "pages/game_centre/game_centre",
-    "pages/game_room/game_room"
+    "pages/rank/rank",  
+    "pages/game/game_index",
+    "pages/game/game_room"
   ],
   "window": {
     "backgroundColor": "#052152",

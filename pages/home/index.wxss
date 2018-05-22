@@ -10,3 +10,6 @@
 button{
   margin-top: 5px;
 }
+.title{
+  text-align: center
+}

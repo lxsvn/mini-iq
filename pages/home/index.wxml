@@ -1,7 +1,8 @@
-<button type="default" bindtap="default" > default </button> 
-<!-- <button type="primary" bindtap="startPlay">开始游戏</button>  -->
-<button type="warn" bindtap="testSocket" >socket开启</button>
-<button type="warn" bindtap="getNextQuestion" >获取题目</button>
-<text>{{msg}}</text>
-
+<view class="title">
+  Debug Bucket
+</view>
  
+<button type="primary" bindtap="goHomePage">去首页</button>
+<button type="warn" bindtap="testSocket">socket开启</button>
+<button type="warn" bindtap="getNextQuestion">获取题目</button>
+<text>{{msg}}</text>

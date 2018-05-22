@@ -1,73 +1,70 @@
-var qcloud = require('../../vendor/wafer2-client-sdk/index')
-var config = require('../../config')
-var util = require('../../utils/util.js')
-const app = getApp();
+// pages/leaderboard/leaderboard.js
 Page({
+
+  /**
+   * 页面的初始数据
+   */
   data: {
-    currentTab: 0,
-    friendsData: [],
-    globalData: [],
-    loadNumber: 0//全球排名数据加载次数
+    listViewItems: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"]
   },
-  onLoad: function (opt) {
-    wx.showShareMenu({
-      withShareTicket: true
-    })
-    app.pageGetUserInfo(this)
-    this.getRankGlobalData();
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+  
   },
-  onShow() {
-    this.getRankFriendsData();
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+  
   },
-  onReachBottom: function () {//下拉加载
-    const that = this
-    if (that.data.currentTab) {
-      that.getRankGlobalData()
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+  
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+  
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+  
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+    return {
+      title: 'IQ@高智商的你',
+      path: '/pages/entry/entry',
+      imageUrl: 'http://i0.hdslb.com/bfs/archive/2722a167806e5e732939ec3d847a9e9ac58e79e0.jpg'
     }
-  },
-  getRankGlobalData() {//加载全球排名的数据
-    const that = this
-    qcloud.request({
-      login: false,
-      url: app.appData.baseUrl + 'getRankGlobalData',
-      data: {
-        loadNumber: that.data.loadNumber
-      },
-      success: (res) => {
-        that.setData({
-          globalData: that.data.globalData.concat(res.data.data),//数据叠加
-          loadNumber: that.data.loadNumber+1
-        })
-      },
-      fail(error) {
-        util.showModel('请求失败', error);
-        console.log('request fail', error);
-      },
-    })
-  },
-  getRankFriendsData: function () {
-    const that = this
-    qcloud.request({
-      login: false,
-      url: app.appData.baseUrl + 'getRankFriendsData',
-      data: {
-        openId: this.data.openId
-      },
-      success: (res) => {
-        this.setData({
-          friendsData: res.data.data
-        })
-      },
-      fail(error) {
-        util.showModel('请求失败', error);
-        console.log('request fail', error);
-      },
-    });
-  },
-  swichNav(e) {
-    var that = this;
-    that.setData({
-      currentTab: e.target.dataset.current,
-    })
-  },
+  }
 })
