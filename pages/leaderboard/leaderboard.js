@@ -61,6 +61,10 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+    return {
+      title: 'IQ@高智商的你',
+      path: '/pages/entry/entry',
+      imageUrl: 'http://i0.hdslb.com/bfs/archive/2722a167806e5e732939ec3d847a9e9ac58e79e0.jpg'
+    }
   }
 })

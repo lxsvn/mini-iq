@@ -5,8 +5,8 @@
     <view class='person' bindtap='getUserInfo'>
 
       <block wx:if="{{hasUserInfo === false}}">
-         <image class='personIcon' src='/imgs/PK_equal.svg' bindtap='login'></image>
-        <text class='personName' open-type='getUserInfo'>昵称</text> 
+        <image class='personIcon' src='/imgs/face.svg' bindtap='login'></image>
+        <button class='personName' open-type='getUserInfo'>授权</button> 
       </block>
       
       <block wx:if="{{hasUserInfo == true}}">
@@ -15,9 +15,10 @@
       </block>
     </view>
 
-    <view class='score' bindtap='gotoPersonCenter'>
+    <view class='score'>
+      <text class='timeText'>{{time}}</text>
       <image class='scoreIcon' src='/imgs/PK_equal.svg'></image>
-      <text class='scoreName'>得分</text>
+      <text class='scoreName'>{{coin}}</text>
     </view>
 
   </view>
@@ -37,7 +38,7 @@
       <text class='leaderboardName'>排行榜</text>
     </view>
 
-    <view class='moreBoard' bindtap='gotoPersonCenter'>
+    <view class='moreBoard'>
       <image class='moreBoardIcon' src='/imgs/entry_qr.svg'></image>
       <text class='moreBoardName'>更多</text>
     </view>
