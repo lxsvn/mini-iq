@@ -1,8 +1,10 @@
 {
   "pages": [
-    "pages/entry/entry",
 
     "pages/home/index",
+    "pages/entry/entry",
+
+   
     "pages/fighting_sort/fighting_sort",
     "pages/fighting_match/fighting_match",
     "pages/friends_sort/friends_sort",
