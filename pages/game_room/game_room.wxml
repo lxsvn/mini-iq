@@ -23,10 +23,12 @@
 
     <button class='first_btn' bindtap='first_answer'>古往今来</button>
     <button class='second_btn' bindtap='second_answer'>股往进来</button>
+    <button class='third_btn' bindtap='third_answer'>3</button>
+    <button class='fouth_btn' bindtap='fouth_answer'>4</button>
 
     <view class='footer'>
 
-      <image src='/imgs/VS.svg'></image>
+      <image class='footer_img' src='/imgs/VS.svg' ></image>
 
       <text>260</text>
 

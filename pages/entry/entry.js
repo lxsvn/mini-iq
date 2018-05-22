@@ -125,13 +125,13 @@ Page({
 	onShow() 
   {
     //当信道连接或者重连了时，关闭已连接的信道
-		this.closeTunnel()
+	//	this.closeTunnel()
 	},
 
 	gotoFighting() 
   {
 		wx.navigateTo({
-      url: '../game_centre/game_centre'
+      url: '../game_centre/game_centre'  
 		})
 	},
 

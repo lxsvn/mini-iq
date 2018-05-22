@@ -11,14 +11,17 @@ module.exports = (function () {
 
   //1. 发起链接（握手）
   function connect(callback) {
-    var app = getApp();
 
-    wx.connectSocket({
-      url: webSocketUrl
-    });
+    if (!socketOpened) {
+      var app = getApp();
 
-    initEvent();
-    connCallback = callback;
+      wx.connectSocket({
+        url: webSocketUrl
+      });
+
+      initEvent();
+      connCallback = callback;
+    }
   }
 
   //2. 初始化webSocket事件
@@ -39,19 +42,19 @@ module.exports = (function () {
     });
     //2.2 ws收到服务器消息时的处理事件
     wx.onSocketMessage(function (res) {
-     // console.log('ws received msg ' + res.data);
+      // console.log('ws received msg ' + res.data);
       msgReceived.callback && msgReceived.callback.call(null, res.data, ...msgReceived.params);
     });
     //2.3 ws出错时的处理事件
     wx.onSocketError(function (res) {
       console.log('ws fail ');
-      socketOpened=false;
+      socketOpened = false;
     });
     //2.4 ws关闭的处理事件
     wx.onSocketClose(function (res) {
       console.log('ws close ');
       socketOpened = false;
-    
+
     });
   }
 
@@ -63,7 +66,7 @@ module.exports = (function () {
     }
     //console.log("sendSocketMessage:" + msg);
     if (socketOpened) {
-     
+
       wx.sendSocketMessage({
         data: msg
       });
@@ -81,11 +84,11 @@ module.exports = (function () {
     }
   }
 
-  
   return {
     connect: connect,
     send: sendSocketMessage,
     setReceiveCallback: setReceiveCallback,
     socketOpened: socketOpened
   };
+
 })();

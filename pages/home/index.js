@@ -10,40 +10,46 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
-  },
-  //事件处理函数
-  bindViewTap: function () {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
+    msg: ''
   },
   onLoad: function () {
-  
+    //this.openWS(); 
+  },
+  openWS: function () {
     if (!ws.socketOpened) {
       // setMsgReceiveCallback 
-      ws.setReceiveCallback(msgReceived, this);
+      ws.setReceiveCallback(msgReceived, this, this.wsCallback);
       // connect to the websocket 
       ws.connect();
-      ws.send({
-        type: 'create',
-        my:'ds'
-      });
-
     }
     else {
-      ws.send({
-        type: 'create',
-        no: 1
-      });
+     
     }
   },
-  getUserInfo: function (e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
+  wsCallback: function (msg) {
     this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  }
+      msg: JSON.stringify(msg)
+    });
+    // console.log("wsCallback:"+msg.Code);
+  },
+  // ################## 事件处理函数 ################## 
+  //1. 开始游戏
+  startPlay: function () {
+    console.log("2");
+  },
+  //2. socket测试
+  testSocket: function () {
+    this.openWS();
+  },
+  //3. 获取题目
+  getNextQuestion: function () {
+    ws.send({
+      "Channel": "mini",
+      "Code": "20001000",
+      "Type": 1,
+      "Data": {
+        "NativeId": "7c929bb0-9529-4cf9-9e26-0cddacbd0abb"
+      }
+    });
+  },
 })

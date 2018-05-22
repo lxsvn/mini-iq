@@ -10,7 +10,6 @@
   width: 90%;
   height: 800rpx;
   background: #f0f;
-  margin-top: 200rpx;
   position: relative;
    border-radius: 15rpx;
   left: 5%;
@@ -45,19 +44,39 @@
 
 .first_btn{
   width: 60%;
+ height: 50rpx;
   margin-top: 30rpx;
+  line-height: 1.38888;
 }
 
 .second_btn{
  width: 60%;
+ height: 50rpx;
   margin-top: 30rpx;
+  line-height:1.38888;
+}
+.third_btn{
+ width: 60%;
+ height: 50rpx;
+  margin-top: 30rpx;
+   line-height: 1.38888;
+}
+.fouth_btn{
+ width: 60%;
+ height: 50rpx;
+  margin-top: 30rpx;
+  line-height: 1.38888;
 }
 
 
 .footer{
-  margin-top: 150rpx;
+  margin-top: 100rpx;
 }
 
+.footer_img{
+  width: 55rpx;
+  height: 50rpx;
+}
 .remind_tv{
   background: #0f0;
   padding-left: 30rpx;
@@ -66,5 +85,4 @@
   padding-bottom: 5rpx;
   margin-left: 20rpx;
   border-radius: 5rem;
-  
 }
