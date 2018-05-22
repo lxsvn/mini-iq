@@ -16,6 +16,7 @@ Page({
     //this.openWS(); 
   },
   openWS: function () {
+    console.log("ws.socketOpened:" + ws.socketOpened);
     if (!ws.socketOpened) {
       // setMsgReceiveCallback 
       ws.setReceiveCallback(msgReceived, this, this.wsCallback);
@@ -39,13 +40,7 @@ Page({
   },
   //2. 获取题目
   getNextQuestion: function () {
-    if (!ws.socketOpened) {
-      this.setData({
-        msg: "请先开启socket!"
-      });
-      return false;
-    }
-    ws.send({
+   ws.send({
       "Channel": "mini",
       "Code": "20001000",
       "Type": 1,

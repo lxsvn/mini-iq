@@ -10,7 +10,7 @@ module.exports = (function () {
 
   //1. 发起链接（握手）
   function connect(callback) {
-
+    console.log(callback);
     if (!socketOpened) {
       var app = getApp();
 
@@ -20,6 +20,8 @@ module.exports = (function () {
 
       initEvent();
       connCallback = callback;
+    }else{
+      console.log("socketOpened!!");
     }
   }
 
@@ -27,7 +29,7 @@ module.exports = (function () {
   function initEvent() {
     //2.1 ws打开事件
     wx.onSocketOpen(function (res) {
-      socketOpened = true;
+
       // 处理一下没发出去的消息
       while (socketMsgQueue.length > 0) {
         var msg = socketMsgQueue.pop();
@@ -36,7 +38,7 @@ module.exports = (function () {
 
       // connection callback
       connCallback && connCallback.call(null);
-
+      socketOpened = true;
       console.log('ws open ');
     });
     //2.2 ws收到服务器消息时的处理事件

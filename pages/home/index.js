@@ -33,11 +33,13 @@ Page({
     // console.log("wsCallback:"+msg.Code);
   },
   // ################## 事件处理函数 ################## 
-  //1. 开始游戏
-  startPlay: function () {
-    console.log("2");
-  },
-  //2. 去测试socket
+  //1. 去首页
+  goHomePage: function () {
+    wx.navigateTo({
+      url: '../entry/entry'
+    })
+  }, 
+  //2. 去测试socket页面
   goTestSocketPage: function () {
     wx.navigateTo({
       url: '../test/socket'
