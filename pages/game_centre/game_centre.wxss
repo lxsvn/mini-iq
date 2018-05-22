@@ -8,10 +8,11 @@
 }
 
 .main_bg{
+  float: hidden;
   width: 90%;
   height: 800rpx;
   background: #f0f;
-  margin-top: 200rpx;
+  
   position: relative;
   border-radius: 15rpx;
   left: 5%;
@@ -24,7 +25,7 @@
   width: 100%;
   height: 100%;
   position: relative;
-  bottom: 920rpx;
+   bottom: 920rpx; 
 }
 
 .ic_avatar{

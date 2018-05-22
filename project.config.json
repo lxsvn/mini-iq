@@ -24,13 +24,30 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
 			"current": -1,
-			"list": []
+			"list": [
+				{
+					"id": -1,
+					"name": "centre",
+					"pathName": "pages/game_centre/game_centre",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "room",
+					"pathName": "pages/game_room/game_room",
+					"query": ""
+				}
+			]
 		}
 	}
 }

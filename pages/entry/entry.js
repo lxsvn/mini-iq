@@ -73,7 +73,7 @@ Page({
 	gotoFighting() 
   {
 		wx.navigateTo({
-      url: '../game_centre/game_centre'
+      url: '../game_centre/game_centre'  
 		})
 	},
 
