@@ -14,7 +14,19 @@ Page({
     isActive: true,
     isSi: true,
     percent: 100,
-
+    question:'',
+    msg:{
+      "School":"",
+      "Category":"",
+      "Options":[]
+    }
+  },
+  wsCallback: function (res) {
+    this.setData({
+      question: res.Data.Quiz,
+      msg: res.Data
+    });
+    // console.log("wsCallback:" + res);
   },
 
   /**点击了第一个答案 */
@@ -45,27 +57,15 @@ Page({
   onLoad: function (options) {
     //页面加载成功 开启倒计时
     Countdown(100, this);
-    if (!ws.socketOpened) {
-      // setMsgReceiveCallback 
-      ws.setReceiveCallback(msgReceived, this);
-      // connect to the websocket 
-      ws.connect();
-      ws.send({
-        "Channel": "mini",
-        "Code": "20001000",
-        "Type": 1,
-        "Data": {
+    openWS(msgReceived, this, this.wsCallback);
+    ws.send({
+      "Channel": "mini",
+      "Code": "20001000",
+      "Type": 1,
+      "Data": {
         "NativeId": "7c929bb0-9529-4cf9-9e26-0cddacbd0abb"
-        }
-      });
-
-    }
-    else {
-      ws.send({
-        type: 'create',
-        no: 1
-      });
-    }
+      }
+    });
   },
 
 
@@ -74,7 +74,19 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  next_question: function(){
+    ws.send({
+      "Channel": "mini",
+      "Code": "20001000",
+      "Type": 1,
+      "Data": {
+        "NativeId": "7c929bb0-9529-4cf9-9e26-0cddacbd0abb"
+      }
+    });
   }
+
 })
 
 /**10秒钟倒计时  residueTime 剩余时间  self 当前页面*/
@@ -100,3 +112,19 @@ function Countdown(residueTime, self) {
 function getNextQuestion() {
 
 };
+
+
+/**
+ * 判断socket是否连接 未连接 重新连接
+ */
+function openWS(msgReceived,page,callBack) {
+  if (!ws.socketOpened) {
+    // setMsgReceiveCallback 
+    ws.setReceiveCallback(msgReceived, page, callBack);
+    // connect to the websocket 
+    ws.connect();
+  }
+  else {
+
+  }
+}

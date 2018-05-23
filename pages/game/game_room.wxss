@@ -30,6 +30,12 @@
   height: 200rpx;
 }
 
+.question_tv{
+  width: 60%;
+  height: 60rpx;
+  font-size: 22rpx;
+}
+
 .customs_pass{
   margin-top: 50rpx;
 }
