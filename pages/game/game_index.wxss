@@ -1,31 +1,23 @@
 /* pages/game_centre/game_centre.wxss */
 @import "../../assets/xss/base_bg.wxss";
-
 .container{
-  display: block;
   width: 100%;
   height: 100%;
 }
-
-.main_bg{
-  float: hidden;
+.content{
   width: 90%;
-  height: 800rpx;
   background: #f0f;
-  
-  position: relative;
   border-radius: 15rpx;
-  left: 5%;
+  height: 100%;
+  position: relative;
 }
 
-.content{
-  display: flex;
+.content_detail{
+   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  position: relative;
-   bottom: 920rpx; 
+   position: relative;
+  bottom: 80rpx;
 }
 
 .ic_avatar{
@@ -41,7 +33,7 @@
 .ic_pattern {
   width: 50%;
   height: 200rpx;
-   margin-top: 20rpx;
+    margin-top: 20rpx;
 }
 
 
@@ -53,13 +45,15 @@
   width: 150rpx;
   height: 150rpx;
   border-radius: 50%;
-   margin-top: 20rpx;
+  margin-top: 20rpx;
 }
 
 .invite_friend{
    margin-top: 20rpx;
+  
 }
 
 .footer{
      margin-top: 20rpx;
+
 }
