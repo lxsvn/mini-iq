@@ -195,3 +195,171 @@
   font-size: 36rpx;
   text-align: center;
 }
+
+/* SignIn view CSS */
+.signInClearView
+{
+  position: absolute; 
+  top: 0rpx;
+  left: 0rpx;
+  right: 0rpx;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.closeSignInView
+{
+  position: absolute; 
+  top: 5%;
+  left: 80%;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+}
+
+.closeSignInImageView
+{
+  position: relative; 
+  height: 50rpx;
+  width: 50rpx;
+}
+
+.signInMainBackView
+{
+  position: absolute; 
+  top: 15%;
+  left: 10%;
+  right: 10%;
+  height: 800rpx;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+}
+
+.signInHeaderView
+{
+  position: absolute; 
+  top: 0rpx;
+  left: 0rpx;
+  right: 0rpx;
+  height: 260rpx;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.signInHeaderImageView
+{
+  position: relative; 
+  top: 0rpx;
+  left: 0rpx;
+  right: 0rpx;
+  height: 100%; 
+  background-color: blue;
+}
+
+.signInBodyView
+{
+  position: absolute;  
+  top: 150rpx;
+  left: 10%; 
+  height: 500rpx;
+  width: 80%;
+  text-align: center;
+  background-color: white;
+  border-radius: 10rpx;
+  border: 1rpx solid #f6f6f6;
+  display: flex;
+  flex-direction: column;
+}
+
+.signInPreDaysView
+{
+  position: relative;  
+  top: 130rpx;
+  left: 0rpx; 
+  height: 150rpx;
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;  
+  justify-content: space-around; 
+  text-align: center;
+}
+
+.signInSufDaysView
+{
+  position: relative;  
+  top: 170rpx;
+  left: 0rpx; 
+  height: 150rpx;
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.signInDayView
+{
+  width: 100rpx;
+  height: 150rpx;
+  margin: 0rpx;
+  border-radius: 15rpx;
+  border: 1rpx solid #f6f6f6;
+  text-align: center;
+}
+
+.signInLastDayView
+{
+  width: 200rpx;
+  height: 150rpx;
+  margin: 0rpx;
+  border-radius: 15rpx;
+  border: 1rpx solid #f6f6f6;
+  text-align: center;
+}
+
+.signInDayTitleView
+{
+  position: relative;   
+  height: 50rpx;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  line-height: 50rpx;
+  font-size: 0.7rem;
+}
+
+.signInDayImageView
+{
+  position: relative;   
+  height: 50rpx;
+  width: 50rpx;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  line-height: 50rpx;
+}
+
+.signInDayCoinView
+{
+  position: relative;   
+  height: 20rpx;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  line-height: 20rpx;
+  font-size: 0.6rem;
+}
+
+.signInFooterView
+{
+  position: absolute;  
+  top: 700rpx;
+  left: 30%; 
+  height: 80rpx;
+  width: 40%;
+  text-align: center;
+  background-color: white;
+  color: black;
+  line-height: 80rpx;
+  border-radius: 55rpx;
+  border: 1rpx solid #f6f6f6;
+}
