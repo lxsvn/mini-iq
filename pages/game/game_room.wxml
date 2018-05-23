@@ -1,42 +1,40 @@
 <!--pages/game_room/game_room.wxml-->
 <view class='container'>
 
-  <view class='main_bg'>
-
-
-  </view>
-
-
   <view class='content'>
 
+    <view class='content_detail'>
 
-    <image src='../../assets/imgs/entry_fighting.jpg' class='ic_pattern'></image>
+      <image src='../../assets/imgs/entry_fighting.jpg' class='ic_pattern'></image>
+
+      <view class='customs_pass'>
+        <text>第</text>
+        <text>1</text>
+        <text>关</text>
+      </view>
+
+      <text class='question_tv'>{{question}}</text>
 
 
-    <view class='customs_pass'>
-      <text>第</text>
-      <text>1</text>
-      <text>关</text>
+      <progress percent='{{percent}}' class='progress_bar'> </progress>
+
+      <button class='first_btn' bindtap='first_answer'>{{msg.Options[0]}}</button>
+      <button class='second_btn' bindtap='second_answer'>{{msg.Options[1]}}</button>
+      <button class='third_btn' bindtap='third_answer'>{{msg.Options[2]}}</button>
+      <button class='fouth_btn' bindtap='fouth_answer'>{{msg.Options[3]}}</button>
+
+      <view class='footer'>
+
+        <image class='footer_img' src='../../assets/imgs/VS.svg'></image>
+
+        <text>260</text>
+
+        <text class='remind_tv' bindtap='next_question'>提示x3</text>
+      </view>
+
     </view>
 
-    <text class='question_tv'>{{question}}</text>
 
-
-    <progress percent='{{percent}}' class='progress_bar'> </progress>
-
-    <button class='first_btn' bindtap='first_answer'>{{msg.Options[0]}}</button>
-    <button class='second_btn' bindtap='second_answer'>{{msg.Options[1]}}</button>
-    <button class='third_btn' bindtap='third_answer'>{{msg.Options[2]}}</button>
-    <button class='fouth_btn' bindtap='fouth_answer'>{{msg.Options[3]}}</button>
-
-    <view class='footer'>
-
-      <image class='footer_img' src='../../assets/imgs/VS.svg'></image>
-
-      <text>260</text>
-
-      <text class='remind_tv' bindtap='next_question'>提示x3</text>
-    </view>
 
 
   </view>
