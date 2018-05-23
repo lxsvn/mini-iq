@@ -58,6 +58,10 @@ Page({
     //页面加载成功 开启倒计时
     Countdown(100, this);
     openWS(msgReceived, this, this.wsCallback);
+    
+  },
+
+  onReady: function () {
     ws.send({
       "Channel": "mini",
       "Code": "20001000",
@@ -67,8 +71,6 @@ Page({
       }
     });
   },
-
-
   /**
    * 用户点击右上角分享
    */
