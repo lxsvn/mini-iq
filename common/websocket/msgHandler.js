@@ -1,10 +1,11 @@
 module.exports = function (msg, page, callback) { // page -> index page
   var app = getApp();
 
-  console.log("ex " + msg);
+   console.log("ex " + msg);
   msg = JSON.parse(msg);
   // var type = msg.data && msg.data.type ||
   //   msg.errMsg && msg.errMsg.type;
+  
   if (typeof callback === "function")
     callback(msg);
 

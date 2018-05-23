@@ -1,34 +1,38 @@
-
 var config = require('../../config.js');
+var app = getApp();
 
 module.exports = (function () {
-  console.log(config);
   var webSocketUrl = `${config.service.hostWS}/ios_v_1.0/66507954637773`,
-    socketOpened = false, // 标记websocket是否已经打开
     socketMsgQueue = [],
     connCallback = null,
     msgReceived = {};
 
   //1. 发起链接（握手）
   function connect(callback) {
-
-    if (!socketOpened) {
-      var app = getApp();
-
-      wx.connectSocket({
-        url: webSocketUrl
-      });
-
+   
+    if (!app.globalData.socketOpened) { 
       initEvent();
       connCallback = callback;
+    }else{
+      console.log("socketOpened!!");
     }
   }
 
   //2. 初始化webSocket事件
   function initEvent() {
+
+    //2.0 ws连接
+    wx.connectSocket({
+      url: webSocketUrl,
+      fail(err) {
+        if (err) {
+          app.globalData.socketOpened=false;
+        }
+      }
+    });
     //2.1 ws打开事件
     wx.onSocketOpen(function (res) {
-      socketOpened = true;
+
       // 处理一下没发出去的消息
       while (socketMsgQueue.length > 0) {
         var msg = socketMsgQueue.pop();
@@ -37,7 +41,7 @@ module.exports = (function () {
 
       // connection callback
       connCallback && connCallback.call(null);
-
+      app.globalData.socketOpened = true;
       console.log('ws open ');
     });
     //2.2 ws收到服务器消息时的处理事件
@@ -48,12 +52,13 @@ module.exports = (function () {
     //2.3 ws出错时的处理事件
     wx.onSocketError(function (res) {
       console.log('ws fail ');
-      socketOpened = false;
+      app.globalData.socketOpened = false;
+      
     });
     //2.4 ws关闭的处理事件
     wx.onSocketClose(function (res) {
       console.log('ws close ');
-      socketOpened = false;
+      app.globalData.socketOpened = false;
 
     });
   }
@@ -64,8 +69,8 @@ module.exports = (function () {
     if (typeof (msg) === 'object') {
       msg = JSON.stringify(msg);
     }
-    //console.log("sendSocketMessage:" + msg);
-    if (socketOpened) {
+     console.log("sendSocketMessage:" + msg);
+    if (app.globalData.socketOpened) {
 
       wx.sendSocketMessage({
         data: msg
@@ -87,8 +92,7 @@ module.exports = (function () {
   return {
     connect: connect,
     send: sendSocketMessage,
-    setReceiveCallback: setReceiveCallback,
-    socketOpened: socketOpened
+    setReceiveCallback: setReceiveCallback 
   };
 
 })();

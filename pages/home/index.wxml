@@ -3,6 +3,5 @@
 </view>
  
 <button type="primary" bindtap="goHomePage">去首页</button>
-<button type="warn" bindtap="testSocket">socket开启</button>
-<button type="warn" bindtap="getNextQuestion">获取题目</button>
+<button type="warn" bindtap="goTestSocketPage">测试socket</button>
 <text>{{msg}}</text>
