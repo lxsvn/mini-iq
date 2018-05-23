@@ -1,25 +1,67 @@
 // pages/leaderboard/leaderboard.js
-Page({
 
+var app = getApp();
+var ws = require('../../common/websocket/connect.js');
+var msgReceived = require('../../common/websocket/msgHandler.js');
+var config = require('../../config.js');
+
+Page({
   /**
    * 页面的初始数据
    */
-  data: {
-    listViewItems: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"]
+  data: 
+  {
+    question: '',
+    QUId: '',
+    School: '',
+    Category: '',
+    Quiz: '',
+    Options: [],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-  
+  onLoad: function () 
+  {
+    this.openWS();
+  },
+
+  refreshData: function()
+  {
+    var rd = config.baseMsg;
+    rd.Code = config.apiCodes.getNextQuestion;
+    rd.Data = {NativeId: "7c929bb0-9529-4cf9-9e26-0cddacbd0abb"};
+    ws.send(rd);
+  },
+
+  openWS: function () 
+  {
+    // setMsgReceiveCallback 
+    ws.setReceiveCallback(msgReceived, this, this.wsCallback);
+    // connect to the websocket 
+    ws.connect();
+  },
+
+  wsCallback: function (res) 
+  {
+    wx.hideLoading();
+    console.log(res);
+    this.setData({
+      QuId: res.Data.QUId,
+      School: res.Data.School,
+      Category: res.Data.Category,
+      Quiz: res.Data.Quiz,
+      Options: res.Data.Options,
+    });
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-  
+  onReady: function () 
+  {
+    this.refreshData();
   },
 
   /**
@@ -60,7 +102,8 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function ()
+  {
     return {
       title: 'IQ@高智商的你',
       path: '/pages/entry/entry',

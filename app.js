@@ -36,6 +36,7 @@ App({
   },
   globalData: {
     socketOpened: false,
-    userInfo: {}
+    userInfo: {},
+    hasLogin: false,
   }
 })

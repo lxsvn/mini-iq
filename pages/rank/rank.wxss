@@ -411,8 +411,10 @@
   margin-top: 5rpx;
   margin-left: 3%;
   margin-right: 3%;
-  height: 150rpx;
+  height: 120rpx;
   background-color: #ffd56e;
+  border-radius: 30rpx;
+  border: 3rpx solid #000;
 }
 
 .footerViewBtn
