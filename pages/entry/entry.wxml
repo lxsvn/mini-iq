@@ -17,9 +17,10 @@
     </view>
 
     <view class='score'>
-      <text class='timeText'>{{time}}</text>
-      <image class='scoreIcon' src='../../assets/imgs/PK_equal.svg'></image>
-      <text class='scoreName'>{{coin}}</text>
+      <view class='timeTextView'>{{time}}</view>
+      <view class='scoreNameView'>{{coin}}</view>
+      <image class='scoreIcon' src='../../assets/imgs/coin.svg'></image>
+      
     </view>
 
   </view>
@@ -48,46 +49,46 @@
 </view>
 
 <!-- 签到浮窗 -->
-<view class='signInClearView' wx:if="{{signInToday}}">
+<view animation='{{closeAnimation}}' class='signInClearView' wx:if="{{signInToday}}">
   <view class='signInMainBackView'>
 
     <view class='signInBodyView'>
       <view class='signInPreDaysView'> 
         
-        <view animation='{{animationCloudData[0]}}' class='signInDayView' bindtap='tapDay0' style='background-color:{{colos[0]}}'>
+        <view animation='{{animationCloudData[0]}}' class='signInDayView' style='background-color:{{colos[0]}}'>
           <view class='signInDayTitleView'>{{signInPreDays[0].day}}</view>
           <image class='signInDayImageView' src='/assets/imgs/reward.svg'></image>
           <view class='signInDayCoinView'>{{signInPreDays[0].reward}}</view>
         </view>
 
-        <view animation='{{animationCloudData[1]}}' class='signInDayView' bindtap='tapDay1' style='background-color:{{colos[1]}}'>
+        <view animation='{{animationCloudData[1]}}' class='signInDayView' style='background-color:{{colos[1]}}'>
           <view class='signInDayTitleView'>{{signInPreDays[1].day}}</view>
           <image class='signInDayImageView' src='/assets/imgs/reward.svg'></image>
           <view class='signInDayCoinView'>{{signInPreDays[1].reward}}</view>
         </view>
-        <view animation='{{animationCloudData[2]}}' class='signInDayView' bindtap='tapDay2' style='background-color:{{colos[2]}}'>
+        <view animation='{{animationCloudData[2]}}' class='signInDayView' style='background-color:{{colos[2]}}'>
           <view class='signInDayTitleView'>{{signInPreDays[2].day}}</view>
           <image class='signInDayImageView' src='/assets/imgs/reward.svg'></image>
           <view class='signInDayCoinView'>{{signInPreDays[2].reward}}</view>
         </view>
-        <view animation='{{animationCloudData[3]}}' class='signInDayView' bindtap='tapDay3' style='background-color:{{colos[3]}}'>
+        <view animation='{{animationCloudData[3]}}' class='signInDayView' style='background-color:{{colos[3]}}'>
           <view class='signInDayTitleView'>{{signInPreDays[3].day}}</view>
           <image class='signInDayImageView' src='/assets/imgs/reward.svg'></image>
           <view class='signInDayCoinView'>{{signInPreDays[3].reward}}</view>
         </view>
       </view>
       <view class='signInSufDaysView'>
-        <view animation='{{animationCloudData[4]}}' class='signInDayView' bindtap='tapDay4' style='background-color:{{colos[4]}}'>
+        <view animation='{{animationCloudData[4]}}' class='signInDayView' style='background-color:{{colos[4]}}'>
           <view class='signInDayTitleView'>{{signInPreDays[4].day}}</view>
           <image class='signInDayImageView' src='/assets/imgs/reward.svg'></image>
           <view class='signInDayCoinView'>{{signInPreDays[4].reward}}</view>
         </view>
-        <view animation='{{animationCloudData[5]}}' class='signInDayView' bindtap='tapDay5' style='background-color:{{colos[5]}}'>
+        <view animation='{{animationCloudData[5]}}' class='signInDayView' style='background-color:{{colos[5]}}'>
           <view class='signInDayTitleView'>{{signInPreDays[5].day}}</view>
           <image class='signInDayImageView' src='/assets/imgs/reward.svg'></image>
           <view class='signInDayCoinView'>{{signInPreDays[6].reward}}</view>
         </view>
-        <view animation='{{animationCloudData[6]}}' class='signInLastDayView' bindtap='tapDay6' style='background-color:{{colos[6]}}'>
+        <view animation='{{animationCloudData[6]}}' class='signInLastDayView' style='background-color:{{colos[6]}}'>
           <view class='signInDayTitleView'>{{signInPreDays[6].day}}</view>
           <image class='signInDayImageView' src='/assets/imgs/reward.svg'></image>
           <view class='signInDayCoinView'>{{signInPreDays[6].reward}}</view>

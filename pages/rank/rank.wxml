@@ -12,11 +12,11 @@
     <image class='championCrown' src='/assets/imgs/crown-1.svg'></image>
 
     <view class='championLevelContainer'>
-      <view class='championLevelNum'>123关</view>
+      <view class='championLevelNum'>{{data[0].level}}关</view>
       <view class='championTopNum'>1</view>
     </view>
 
-    <text class='championName'>IQ 第一名</text>
+    <text class='championName'>{{data[0].Name}}</text>
   </view>
 
   <!-- 亚军  -->
@@ -29,11 +29,11 @@
     <image class='runnerUpCrown' src='/assets/imgs/crown-2.svg'></image>
 
     <view class='runnerUpLevelContainer'>
-      <view class='runnerUpLevelNum'>100关</view>
+      <view class='runnerUpLevelNum'>{{data[1].level}}关</view>
       <view class='runnerUpTopNum'>2</view>
     </view>
 
-    <text class='runnerUpName'>IQ 第二名</text>
+    <text class='runnerUpName'>{{data[1].Name}}</text>
   </view>
 
   <!-- 季军  -->
@@ -46,17 +46,17 @@
     <image class='thirdPlaceCrown' src='/assets/imgs/crown-3.svg'></image>
 
     <view class='thirdPlaceLevelContainer'>
-      <view class='thirdPlaceLevelNum'>89关</view>
+      <view class='thirdPlaceLevelNum'>{{data[2].level}}关</view>
       <view class='thirdPlaceTopNum'>3</view>
     </view>
 
-    <text class='thirdPlaceName'>IQ 第三名</text>
+    <text class='thirdPlaceName'>{{data[2].Name}}</text>
   </view>
 </view>
 
 <view class='listView'>
   <scroll-view scroll-y class='listScrollView'>
-    <view class='listViewItem' wx:for="{{Options}}" wx:key="{{index}}" >
+    <view class='listViewItem' wx:for="{{data}}" wx:for-item="item" wx:for-index="index">
       
       <view class='listViewItemRanking'>{{index}}</view>
 
@@ -64,10 +64,10 @@
         <image class='listViewItemIcon' src='/assets/imgs/face.svg'></image>
        </view> 
 
-      <view class='listViewItemName'>{{Options[0]}}</view>
+      <view class='listViewItemName'>{{data[index].Name}}</view>
 
       <view class='listViewItemLevelContainer'>
-        <view class='listViewItemLevel'>{{Options[1]}}</view>
+        <view class='listViewItemLevel'>{{data[index].level}}</view>
       </view>
       
     </view>
@@ -76,16 +76,16 @@
 </view>
 
 <view class='selfScoreView'>      
-    <view class='listViewItemRanking'>1</view>
+    <view class='listViewItemRanking'>{{data[1].Code}}</view>
 
       <view class='listViewItemIconContainer'> 
       <image class='listViewItemIcon' src='/assets/imgs/face.svg'></image>
       </view> 
 
-    <view class='listViewItemName'>self</view>
+    <view class='listViewItemName'>{{data[1].Name}}</view>
 
     <view class='listViewItemLevelContainer'>
-      <view class='listViewItemLevel'>123level</view>
+      <view class='listViewItemLevel'>{{data[1].level}}</view>
     </view>
 </view>
 
